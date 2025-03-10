@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Produtos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="produto, iterStat : ${produtos}">
+                    <td th:text="${produto.nome}"></td>
+                    <td th:text="${produto.preco}"></td>
+                    <td th:text="${produto.quantidade}"></td>
+                    <td>
+                        <!-- Passando o índice da lista como ID -->
+                        <a th:href="@{/editarProduto/{id}(id=${iterStat.index})}" class="btn btn-edit">Editar</a>
+                        <a th:href="@{/deletarProduto/{id}(id=${iterStat.index})}" class="btn btn-delete">Deletar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <a href="/adicionarProduto">Adicionar Produto</a>
+    </div>
+</body>
+</html>
+

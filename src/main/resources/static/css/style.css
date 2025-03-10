@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.edit {
+    background-color: #ffc107;
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #4CAF50; /* Cor verde */
+}
+
+.btn-edit:hover {
+    background-color: #45a049; /* Cor verde mais escura ao passar o mouse */
+}
+
+.btn-delete {
+    background-color: #f44336; /* Cor vermelha */
+}
+
+.btn-delete:hover {
+    background-color: #da190b; /* Cor vermelha mais escura ao passar o mouse */
+}
