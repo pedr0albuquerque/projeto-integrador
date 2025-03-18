@@ -18,14 +18,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="produto, iterStat : ${produtos}">
+                <tr th:each="produto : ${produtos}">
                     <td th:text="${produto.nome}"></td>
                     <td th:text="${produto.preco}"></td>
                     <td th:text="${produto.quantidade}"></td>
                     <td>
                         <!-- Passando o índice da lista como ID -->
-                        <a th:href="@{/editarProduto/{id}(id=${iterStat.index})}" class="btn btn-edit">Editar</a>
-                        <a th:href="@{/deletarProduto/{id}(id=${iterStat.index})}" class="btn btn-delete">Deletar</a>
+                        <a th:href="@{/editarProduto/{id}(id=${produto.id})}" class="btn btn-edit">Editar</a>
+                        <a th:href="@{/deletarProduto/{id}(id=${produto.id})}" class="btn btn-delete">Deletar</a>
                     </td>
                 </tr>
             </tbody>
